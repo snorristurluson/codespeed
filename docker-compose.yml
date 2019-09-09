@@ -1,0 +1,12 @@
+version: '3'
+services:
+  codespeed:
+    build: .
+    ports:
+      - "8000:8000"
+  my_postgres:
+    image: postgres:11
+    volumes:
+      - ../db-data:/var/lib/postgresql/data
+    ports:
+      - "54320:5432"

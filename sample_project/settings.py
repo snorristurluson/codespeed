@@ -17,8 +17,12 @@ ADMINS = (
 MANAGERS = ADMINS
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASEDIR, 'data.db'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'codespeed',
+        'USER': 'postgres',
+        'PASSWORD': '',
+        'HOST': 'my_postgres',
+        'PORT': '5432',
     }
 }
 
